@@ -45,7 +45,7 @@ function SearchBar({ onSearch }) {
                       })
                      
                
-                console.log(movie);
+               
             }
              
             }
