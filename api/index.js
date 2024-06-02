@@ -17,7 +17,7 @@ const mongourl = process.env.MONGO_URL
 const jwtsecret = process.env.JWT_KEY;
 
 mongoose.connect(mongourl)
-app.get('/test', (req,res)=>{
+app.get('/', (req,res)=>{
     res.json('test ok');
 })
   
