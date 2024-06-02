@@ -27,7 +27,7 @@ function SearchBar({ onSearch }) {
 
         let arr =[]
         try {
-          const response = await fetch(`http://www.omdbapi.com/?apikey=5d01f461&s=${searchTerm}`);
+          const response = await fetch(`https://www.omdbapi.com/?apikey=5d01f461&s=${searchTerm}`);
           const data = await response.json();
           
           console.log("got",data.Search)
