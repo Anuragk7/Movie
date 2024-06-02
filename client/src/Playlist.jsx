@@ -7,7 +7,7 @@ export default function Playlist() {
   const [movies, setMovies] = useState([]);
   async function getDesc(id) {
     try {
-      const response = await fetch('http://www.omdbapi.com/?apikey=5d01f461&plot=long&i=' + id);
+      const response = await fetch('https://www.omdbapi.com/?apikey=5d01f461&plot=long&i=' + id);
       const data = await response.json();
       return {
         plot: data.Plot,
