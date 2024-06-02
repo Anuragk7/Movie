@@ -9,7 +9,7 @@ require('dotenv').config()
 const app = express();
 app.use(cors({
     credentials: true, 
-    origin:  'http://localhost:5173'
+    origin:  'https://movie-frontend-self.vercel.app/'
 }))  
 app.use(express.json())
 console.log(process.env.MONGO_URL)
