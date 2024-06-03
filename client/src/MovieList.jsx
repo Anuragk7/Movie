@@ -13,7 +13,7 @@ function MovieList(props) {
         return;
     }
     else {
-        const st = await axios.post("http://localhost:4000/save", {imdb:m.imdb,userId:id  });
+        const st = await axios.post("https://movie-rosy-kappa.vercel.app/save", {imdb:m.imdb,userId:id  });
         console.log(m.imdb)
         add(true)
     }
