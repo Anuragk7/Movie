@@ -12,7 +12,7 @@ export default function SignupAndLogin() {
  axios.defaults.withCredentials = true;
   async function handleSubmit(ev) {
     ev.preventDefault();
-    const url = isOldUser ? 'http://localhost:4000/login' : 'http://localhost:4000/register';
+    const url = isOldUser ? 'https://movie-git-main-anurags-projects-d3f15b11.vercel.app/login' : 'https://movie-git-main-anurags-projects-d3f15b11.vercel.app/register';
     if (!isOldUser) {
      
       const { data } = await axios.post(url, {username: user, password: password });
