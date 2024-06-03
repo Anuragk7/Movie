@@ -34,7 +34,7 @@ export default function SignupAndLogin() {
   return (
     <div className="bg-gradient-to-r from-blue-200 to-cyan-200 h-screen flex items-center">
       <form className="w-64 mx-auto mb-10" onSubmit={handleSubmit}>
-        <h1 className="text-white m-5 text-center font-bold text-xl">Welcome To Fasal Movie Plalist</h1>
+        <h1 className="text-white m-5 text-center font-bold text-xl">Welcome To Fasal Movie Playlist</h1>
         <input
           type="text"
           placeholder="Username"
