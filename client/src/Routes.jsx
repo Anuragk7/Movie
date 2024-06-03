@@ -25,7 +25,7 @@ function Routes() {
     return (
       <>
         <div className="bg-black py-4 px-6 flex items-center justify-between flex-wrap">
-          <h1 className="text-white text-xl font-bold">Netflix</h1>
+          <h1 className="text-white text-xl font-bold">FASAL</h1>
           <div className="flex space-x-4 mt-2 md:mt-0">
             <button 
               className="bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded-md w-full md:w-auto" 
