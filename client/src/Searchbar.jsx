@@ -6,8 +6,11 @@ function SearchBar({ onSearch }) {
     const [searchTerm,setSearchTerm] = useState("");
     const [movie, setMovie] = useState([]);
     const {userId} = useContext(Usercontext)
+    const [loading, setLoading] = useState(false);
       async function getDesc(id) {
+           setLoading(true);
         try {
+            
           const response = await fetch('https://www.omdbapi.com/?apikey=5d01f461&plot=long&i=' + id);
           const data = await response.json();
           return {
@@ -20,6 +23,9 @@ function SearchBar({ onSearch }) {
             plot: 'No description available',
             genres: []
           };
+        }
+           finally {
+            setLoading(false); // Set loading to false when search completes
         }
       }
     
@@ -88,16 +94,17 @@ function SearchBar({ onSearch }) {
         Search
       </button>
      
-    </div>
-     <div>
-     {movie.map( (m,index) => {
-         
-         return (
-            <MovieList m = {m} key = {index}/>
-           )
-     })
-     }
-   </div>
+    <div>
+                {loading ? (
+                    <div className="text-white">Loading...</div>
+                ) : (
+                    movie.map((m, index) => {
+                        return (
+                            <MovieList m={m} key={index} />
+                        );
+                    })
+                )}
+            </div>
    </div>
 
   );
