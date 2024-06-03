@@ -10,7 +10,7 @@ function SearchBar({ onSearch }) {
 
     async function getDesc(id) {
         try {
-            const response = await fetch('http://www.omdbapi.com/?apikey=5d01f461&plot=long&i=' + id);
+            const response = await fetch('https://www.omdbapi.com/?apikey=5d01f461&plot=long&i=' + id);
             const data = await response.json();
             return {
                 plot: data.Plot,
@@ -29,7 +29,7 @@ function SearchBar({ onSearch }) {
         setLoading(true); // Set loading to true when search starts
         let arr = [];
         try {
-            const response = await fetch(`http://www.omdbapi.com/?apikey=5d01f461&s=${searchTerm}`);
+            const response = await fetch(`https://www.omdbapi.com/?apikey=5d01f461&s=${searchTerm}`);
             const data = await response.json();
 
             for (let i = 0; i < data.Search.length; i++) {
