@@ -57,7 +57,7 @@ export default function Playlist() {
 
   async function getMovie() {
     try {
-      const { data } = await axios.post('http://localhost:4000/movies', { id: id });
+      const { data } = await axios.post('https://movie-rosy-kappa.vercel.app/movies', { id: id });
       console.log("req movie")
       console.log(data)
       for (let i=0; i<data.length; i++){
